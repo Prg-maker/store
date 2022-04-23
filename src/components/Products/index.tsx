@@ -3,6 +3,7 @@ import {useState , useEffect} from 'react'
 
 
 interface ProductosProps{
+  id?: string
   name?: string;
   img?: string;
   price:string
@@ -64,6 +65,7 @@ const Button = styled.button`
 
 
 export function Producto({
+  id,
   name,
   img,
   price
@@ -71,7 +73,7 @@ export function Producto({
   return(
     <Container>
 
-      <a href="">
+      <a href={`/${id}`}>
         <Image src={img}/>
       </a>
       <Title>{name}</Title>

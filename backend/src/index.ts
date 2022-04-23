@@ -32,7 +32,6 @@ server.post('/create-checkout-session' , async (req , res)=> {
 
   const products = await stripe.products.list()
 
-  console.log(products.data)
 
   const url = session.url as string
   return res.redirect(url)

@@ -14,6 +14,7 @@ import {
 import axios from 'axios'
 
 interface PropsProducto{
+  id: string
   name:string
   images: string[]
 }
@@ -65,6 +66,8 @@ export function Home(){
 
         <div className='cards'>
           <Producto
+            id={producto?.id}
+            key={producto?.id}
             price='R$80'
             img= {producto?.images[0]}
             name={producto?.name}
